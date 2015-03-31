@@ -153,10 +153,10 @@ STRINGS.CHARACTER_NAMES.lindsay = "Lindsay"
 STRINGS.CHARACTER_DESCRIPTIONS.lindsay = "- Can create and read Wickerbottom's books.\n- Loses sanity faster at night and around auras."
 STRINGS.CHARACTER_QUOTES.lindsay = "\"If it doesn't involve food or cats, I'm not interested.\""
 -- Matt
-STRINGS.CHARACTER_TITLES.matt = "The Outdoorsman"
+STRINGS.CHARACTER_TITLES.matt = "The Banoodle"
 STRINGS.CHARACTER_NAMES.matt = "Matt"
 STRINGS.CHARACTER_DESCRIPTIONS.matt = "He is a Matt"
-STRINGS.CHARACTER_QUOTES.matt = "\"Something Witty\" - Matt"
+STRINGS.CHARACTER_QUOTES.matt = "\"banoodle\""
 -- Sam
 STRINGS.CHARACTER_TITLES.sam = "The Sam"
 STRINGS.CHARACTER_NAMES.sam = "Sam"

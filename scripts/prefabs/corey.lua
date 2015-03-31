@@ -55,7 +55,7 @@ local master_postinit = function(inst)
   -- Stats
   inst.components.health:SetMaxHealth(150)
   inst.components.hunger:SetMax(125)
-  inst.components.hunger:SetRate(TUNING.WILSON_HUNGER_RATE * 1)
+  inst.components.hunger:SetRate(TUNING.WILSON_HUNGER_RATE * 1.4) -- Healthy Appetite
   inst.components.sanity:SetMax(225)
 end
 
