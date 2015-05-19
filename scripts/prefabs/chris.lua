@@ -42,6 +42,23 @@ local start_inv = {
 
 }
 
+-- Implement damage taken on eating bad food
+-- If food is stale, loses 1/4 of food hunger value
+-- If food is spoiled, loese 1/2 of food hunger and 1/4 of health value
+local chris_oneat = function(inst, food)
+  if food.components.perishable:IsStale() then
+    local hungerval = food.components.edible.hungervalue * 5 / 4
+    inst.components.hunger:DoDelta(-hungerval)
+    inst.components.talker:Say("I knew I shouldn't have trusted that free sushi.")
+  elseif food.components.perishable:IsSpoiled() then
+    local healthval = food.components.edible.healthvalue * 5 / 4
+    local hungerval = food.components.edible.hungervalue * 3 / 2
+    inst.components.health:DoDelta(-healthval)
+    inst.components.hunger:DoDelta(-hungerval)
+    inst.components.talker:Say("oh le no, I indeedy appear to have fallen le ill XD time for le pills")
+  end
+end
+
 -- Initialization for host and client
 local common_postinit = function(inst)
   inst.MiniMapEntity:SetIcon("chris.tex")
@@ -57,6 +74,9 @@ local master_postinit = function(inst)
   inst.components.hunger:SetMax(150)
   inst.components.hunger:SetRate(TUNING.WILSON_HUNGER_RATE * 1)
   inst.components.sanity:SetMax(200)
+
+  -- Eating
+  inst.components.eater.oneatfn = chris_oneat
 
   -- Effects
   inst.components.locomotor.runspeed = (TUNING.WILSON_RUN_SPEED * 1.3) -- Cross country

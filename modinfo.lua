@@ -9,8 +9,8 @@ forumthread = ""
 -- api version
 api_version = 10
 
-dont_starve_compatible = false
-reign_of_giants_compatible = false
+dont_starve_compatible = true
+reign_of_giants_compatible = true
 dst_compatible = true
 
 all_clients_require_mod = true
@@ -21,5 +21,13 @@ icon = "modicon.tex"
 
 server_filter_tags = {
   "nightskype",
-  "skype"
+  "skype",
+  "chris",
+  "corey",
+  "lindsay",
+  "matt",
+  "sam",
+  "sarah",
+  "sean",
+  "steve"
 }
